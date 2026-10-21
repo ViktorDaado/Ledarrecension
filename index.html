@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Texten som syns i webbläsarens flik. -->
     <title>Ledarrecension.se</title>
+    <!-- Kopplar in filen som bestämmer utseendet. -->
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -27,90 +29,93 @@
       <section>
         <h2>Utvalda ledare</h2>
 
-        <!-- Varje article är ett ledarkort. Alla är påhittade. -->
-        <article>
-          <h3>Anna Exempelsson</h3>
-          <p>Platschef, Solbacka Logistik AB</p>
+        <!-- div är en neutral låda. Här samlar den korten så att CSS kan lägga dem i ett rutnät. -->
+        <div class="kortrutnat">
+          <!-- Varje article är ett ledarkort. Alla är påhittade. -->
+          <article class="ledarkort">
+            <h3>Anna Exempelsson</h3>
+            <p class="roll">Platschef, Solbacka Logistik AB</p>
 
-          <h4>Arbetsplatser</h4>
-          <ol>
-            <li>2016–2020: Teamledare, Nordljus Konsult</li>
-            <li>2020–nu: Platschef, Solbacka Logistik AB</li>
-          </ol>
+            <h4>Arbetsplatser</h4>
+            <ol class="tidslinje">
+              <li>2016–2020: Teamledare, Nordljus Konsult</li>
+              <li>2020–nu: Platschef, Solbacka Logistik AB</li>
+            </ol>
 
-          <h4>Betyg</h4>
-          <ul>
-            <li>Kommunikation: 5 av 5</li>
-            <li>Rättvisa: 4 av 5</li>
-            <li>Stöd: 5 av 5</li>
-          </ul>
+            <h4>Betyg</h4>
+            <ul class="betygslista">
+              <li class="betyg"><span>Kommunikation</span><span class="stapel" data-varde="5"><span class="fyllning"></span></span><span>5/5</span></li>
+              <li class="betyg"><span>Rättvisa</span><span class="stapel" data-varde="4"><span class="fyllning"></span></span><span>4/5</span></li>
+              <li class="betyg"><span>Stöd</span><span class="stapel" data-varde="5"><span class="fyllning"></span></span><span>5/5</span></li>
+            </ul>
 
-          <h4>Omdömen</h4>
-          <blockquote>
-            <p>"Tydlig med mål och lyssnar på alla i laget."</p>
-            <p>Solbacka Logistik AB</p>
-          </blockquote>
-          <blockquote>
-            <p>"Gav mig ansvar tidigt och backade upp när det blev fel."</p>
-            <p>Nordljus Konsult</p>
-          </blockquote>
-        </article>
+            <h4>Omdömen</h4>
+            <blockquote>
+              <p>"Tydlig med mål och lyssnar på alla i laget."</p>
+              <p class="kalla">Solbacka Logistik AB</p>
+            </blockquote>
+            <blockquote>
+              <p>"Gav mig ansvar tidigt och backade upp när det blev fel."</p>
+              <p class="kalla">Nordljus Konsult</p>
+            </blockquote>
+          </article>
 
-        <article>
-          <h3>Erik Påhittad</h3>
-          <p>Avdelningschef, Nordljus Konsult</p>
+          <article class="ledarkort">
+            <h3>Erik Påhittad</h3>
+            <p class="roll">Avdelningschef, Nordljus Konsult</p>
 
-          <h4>Arbetsplatser</h4>
-          <ol>
-            <li>2014–2019: Butikschef, Café Kaffekoppen</li>
-            <li>2019–nu: Avdelningschef, Nordljus Konsult</li>
-          </ol>
+            <h4>Arbetsplatser</h4>
+            <ol class="tidslinje">
+              <li>2014–2019: Butikschef, Café Kaffekoppen</li>
+              <li>2019–nu: Avdelningschef, Nordljus Konsult</li>
+            </ol>
 
-          <h4>Betyg</h4>
-          <ul>
-            <li>Kommunikation: 2 av 5</li>
-            <li>Rättvisa: 3 av 5</li>
-            <li>Stöd: 2 av 5</li>
-          </ul>
+            <h4>Betyg</h4>
+            <ul class="betygslista">
+              <li class="betyg"><span>Kommunikation</span><span class="stapel" data-varde="2"><span class="fyllning"></span></span><span>2/5</span></li>
+              <li class="betyg"><span>Rättvisa</span><span class="stapel" data-varde="3"><span class="fyllning"></span></span><span>3/5</span></li>
+              <li class="betyg"><span>Stöd</span><span class="stapel" data-varde="2"><span class="fyllning"></span></span><span>2/5</span></li>
+            </ul>
 
-          <h4>Omdömen</h4>
-          <blockquote>
-            <p>"Beslut kom ofta utan förklaring, men det har blivit bättre det senaste året."</p>
-            <p>Nordljus Konsult</p>
-          </blockquote>
-          <blockquote>
-            <p>"Svår att nå när det var stressigt i butiken."</p>
-            <p>Café Kaffekoppen</p>
-          </blockquote>
-        </article>
+            <h4>Omdömen</h4>
+            <blockquote>
+              <p>"Beslut kom ofta utan förklaring, men det har blivit bättre det senaste året."</p>
+              <p class="kalla">Nordljus Konsult</p>
+            </blockquote>
+            <blockquote>
+              <p>"Svår att nå när det var stressigt i butiken."</p>
+              <p class="kalla">Café Kaffekoppen</p>
+            </blockquote>
+          </article>
 
-        <article>
-          <h3>Leila Testberg</h3>
-          <p>Kafé- och personalansvarig, Café Kaffekoppen</p>
+          <article class="ledarkort">
+            <h3>Leila Testberg</h3>
+            <p class="roll">Kafé- och personalansvarig, Café Kaffekoppen</p>
 
-          <h4>Arbetsplatser</h4>
-          <ol>
-            <li>2018–2022: Skiftledare, Solbacka Logistik AB</li>
-            <li>2022–nu: Kafé- och personalansvarig, Café Kaffekoppen</li>
-          </ol>
+            <h4>Arbetsplatser</h4>
+            <ol class="tidslinje">
+              <li>2018–2022: Skiftledare, Solbacka Logistik AB</li>
+              <li>2022–nu: Kafé- och personalansvarig, Café Kaffekoppen</li>
+            </ol>
 
-          <h4>Betyg</h4>
-          <ul>
-            <li>Kommunikation: 4 av 5</li>
-            <li>Rättvisa: 5 av 5</li>
-            <li>Stöd: 4 av 5</li>
-          </ul>
+            <h4>Betyg</h4>
+            <ul class="betygslista">
+              <li class="betyg"><span>Kommunikation</span><span class="stapel" data-varde="4"><span class="fyllning"></span></span><span>4/5</span></li>
+              <li class="betyg"><span>Rättvisa</span><span class="stapel" data-varde="5"><span class="fyllning"></span></span><span>5/5</span></li>
+              <li class="betyg"><span>Stöd</span><span class="stapel" data-varde="4"><span class="fyllning"></span></span><span>4/5</span></li>
+            </ul>
 
-          <h4>Omdömen</h4>
-          <blockquote>
-            <p>"Rättvis schemaläggning och alltid ärlig feedback."</p>
-            <p>Café Kaffekoppen</p>
-          </blockquote>
-          <blockquote>
-            <p>"Höll ihop skiftet även under de tuffaste veckorna."</p>
-            <p>Solbacka Logistik AB</p>
-          </blockquote>
-        </article>
+            <h4>Omdömen</h4>
+            <blockquote>
+              <p>"Rättvis schemaläggning och alltid ärlig feedback."</p>
+              <p class="kalla">Café Kaffekoppen</p>
+            </blockquote>
+            <blockquote>
+              <p>"Höll ihop skiftet även under de tuffaste veckorna."</p>
+              <p class="kalla">Solbacka Logistik AB</p>
+            </blockquote>
+          </article>
+        </div>
       </section>
     </main>
 
