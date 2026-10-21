@@ -1,0 +1,166 @@
+/*
+  style.css bestämmer hur startsidan ser ut.
+  En CSS-regel består av en väljare (vad som ska stylas)
+  och egenskaper inom { } (hur det ska se ut).
+*/
+
+/* Färger samlade på ett ställe. Ändra här så ändras hela sidan. */
+:root {
+  --bakgrund: #f5f6f8;
+  --kort: #ffffff;
+  --text: #1f2933;
+  --dampad-text: #5f6b7a;
+  --accent: #1f4e79;
+  --accent-ljus: #e3ecf5;
+  --linje: #d9dee5;
+}
+
+/* Gör att bredd och höjd räknas inklusive kantlinjer och luft. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bakgrund);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Toppen med rubriken. */
+header {
+  background: var(--accent);
+  color: #ffffff;
+  padding: 56px 16px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: 2.4rem;
+}
+
+header p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
+
+/* Huvuddelen hålls lagom bred och centrerad. */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+h2 {
+  color: var(--accent);
+}
+
+/* Rutnätet med ledarkort. Korten radar upp sig så många som får plats,
+   minst 300 pixlar breda. På mobil blir det ett kort per rad. */
+.kortrutnat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.ledarkort {
+  background: var(--kort);
+  border: 1px solid var(--linje);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.ledarkort h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.roll {
+  margin: 4px 0 16px;
+  color: var(--dampad-text);
+}
+
+.ledarkort h4 {
+  margin: 20px 0 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--dampad-text);
+}
+
+/* Arbetsplatserna som en enkel tidslinje med en linje till vänster. */
+.tidslinje {
+  list-style: none;
+  margin: 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent-ljus);
+}
+
+.tidslinje li {
+  margin-bottom: 4px;
+}
+
+/* Betygen: namn till vänster, stapel i mitten, siffra till höger. */
+.betygslista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.betyg {
+  display: grid;
+  grid-template-columns: 120px 1fr 32px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.stapel {
+  height: 8px;
+  background: var(--accent-ljus);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fyllning {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+/* Hur långt stapeln fylls beror på betyget i data-varde. */
+.stapel[data-varde="1"] .fyllning { width: 20%; }
+.stapel[data-varde="2"] .fyllning { width: 40%; }
+.stapel[data-varde="3"] .fyllning { width: 60%; }
+.stapel[data-varde="4"] .fyllning { width: 80%; }
+.stapel[data-varde="5"] .fyllning { width: 100%; }
+
+/* Omdömena som citat med en färgad kant. */
+blockquote {
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  background: var(--bakgrund);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+.kalla {
+  font-size: 0.85rem;
+  color: var(--dampad-text);
+}
+
+footer {
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--dampad-text);
+  border-top: 1px solid var(--linje);
+}

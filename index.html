@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Talar om för webbläsaren att det här är en modern HTML-sida. -->
+<html lang="sv">
+  <head>
+    <!-- head: information OM sidan. Inget här syns direkt på sidan. -->
+    <meta charset="utf-8">
+    <!-- Gör att sidan anpassar sig till mobilskärmar. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Texten som syns i webbläsarens flik. -->
+    <title>Ledarrecension.se</title>
+    <!-- Kopplar in filen som bestämmer utseendet. -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- body: allt som syns på sidan. -->
+
+    <header>
+      <h1>Ledarrecension.se</h1>
+      <p>Vi lyfter fram gott ledarskap så att det får mer inflytande, och synliggör brister så att de kan bli bättre.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Omdömen som följer ledaren</h2>
+        <p>Ledare byter arbetsplats, och deras ledarskap följer med. Här hör omdömena till ledaren, inte till företaget.</p>
+      </section>
+
+      <section>
+        <h2>Utvalda ledare</h2>
+
+        <!-- div är en neutral låda. Här samlar den korten så att CSS kan lägga dem i ett rutnät. -->
+        <div class="kortrutnat">
+          <!-- Varje article är ett ledarkort. Alla är påhittade. -->
+          <article class="ledarkort">
+            <h3>Anna Exempelsson</h3>
+            <p class="roll">Platschef, Solbacka Logistik AB</p>
+
+            <h4>Arbetsplatser</h4>
+            <ol class="tidslinje">
+              <li>2016–2020: Teamledare, Nordljus Konsult</li>
+              <li>2020–nu: Platschef, Solbacka Logistik AB</li>
+            </ol>
+
+            <h4>Betyg</h4>
+            <ul class="betygslista">
+              <li class="betyg"><span>Kommunikation</span><span class="stapel" data-varde="5"><span class="fyllning"></span></span><span>5/5</span></li>
+              <li class="betyg"><span>Rättvisa</span><span class="stapel" data-varde="4"><span class="fyllning"></span></span><span>4/5</span></li>
+              <li class="betyg"><span>Stöd</span><span class="stapel" data-varde="5"><span class="fyllning"></span></span><span>5/5</span></li>
+            </ul>
+
+            <h4>Omdömen</h4>
+            <blockquote>
+              <p>"Tydlig med mål och lyssnar på alla i laget."</p>
+              <p class="kalla">Solbacka Logistik AB</p>
+            </blockquote>
+            <blockquote>
+              <p>"Gav mig ansvar tidigt och backade upp när det blev fel."</p>
+              <p class="kalla">Nordljus Konsult</p>
+            </blockquote>
+          </article>
+
+          <article class="ledarkort">
+            <h3>Erik Påhittad</h3>
+            <p class="roll">Avdelningschef, Nordljus Konsult</p>
+
+            <h4>Arbetsplatser</h4>
+            <ol class="tidslinje">
+              <li>2014–2019: Butikschef, Café Kaffekoppen</li>
+              <li>2019–nu: Avdelningschef, Nordljus Konsult</li>
+            </ol>
+
+            <h4>Betyg</h4>
+            <ul class="betygslista">
+              <li class="betyg"><span>Kommunikation</span><span class="stapel" data-varde="2"><span class="fyllning"></span></span><span>2/5</span></li>
+              <li class="betyg"><span>Rättvisa</span><span class="stapel" data-varde="3"><span class="fyllning"></span></span><span>3/5</span></li>
+              <li class="betyg"><span>Stöd</span><span class="stapel" data-varde="2"><span class="fyllning"></span></span><span>2/5</span></li>
+            </ul>
+
+            <h4>Omdömen</h4>
+            <blockquote>
+              <p>"Beslut kom ofta utan förklaring, men det har blivit bättre det senaste året."</p>
+              <p class="kalla">Nordljus Konsult</p>
+            </blockquote>
+            <blockquote>
+              <p>"Svår att nå när det var stressigt i butiken."</p>
+              <p class="kalla">Café Kaffekoppen</p>
+            </blockquote>
+          </article>
+
+          <article class="ledarkort">
+            <h3>Leila Testberg</h3>
+            <p class="roll">Kafé- och personalansvarig, Café Kaffekoppen</p>
+
+            <h4>Arbetsplatser</h4>
+            <ol class="tidslinje">
+              <li>2018–2022: Skiftledare, Solbacka Logistik AB</li>
+              <li>2022–nu: Kafé- och personalansvarig, Café Kaffekoppen</li>
+            </ol>
+
+            <h4>Betyg</h4>
+            <ul class="betygslista">
+              <li class="betyg"><span>Kommunikation</span><span class="stapel" data-varde="4"><span class="fyllning"></span></span><span>4/5</span></li>
+              <li class="betyg"><span>Rättvisa</span><span class="stapel" data-varde="5"><span class="fyllning"></span></span><span>5/5</span></li>
+              <li class="betyg"><span>Stöd</span><span class="stapel" data-varde="4"><span class="fyllning"></span></span><span>4/5</span></li>
+            </ul>
+
+            <h4>Omdömen</h4>
+            <blockquote>
+              <p>"Rättvis schemaläggning och alltid ärlig feedback."</p>
+              <p class="kalla">Café Kaffekoppen</p>
+            </blockquote>
+            <blockquote>
+              <p>"Höll ihop skiftet även under de tuffaste veckorna."</p>
+              <p class="kalla">Solbacka Logistik AB</p>
+            </blockquote>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Alla personer, företag och omdömen på den här sidan är påhittade.</p>
+    </footer>
+  </body>
+</html>
